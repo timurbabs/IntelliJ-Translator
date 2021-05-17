@@ -14,7 +14,7 @@ import translatorsAPI.GoogleScriptAPI;
 
 import java.io.IOException;
 
-public class SelectedCodeAction extends AnAction {
+public class SelectedTextAction extends AnAction {
 
     private static final String TITLE = "Translator";
 

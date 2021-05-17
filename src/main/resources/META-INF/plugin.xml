@@ -18,5 +18,9 @@
 
     <actions>
         <!-- Add your actions here -->
+        <action id="actions.SelectedTextAction" class="actions.SelectedTextAction"
+                text="Selected text translate">
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl BACK_SLASH" second-keystroke="ctrl T"/>
+        </action>
     </actions>
 </idea-plugin>
