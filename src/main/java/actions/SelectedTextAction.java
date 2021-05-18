@@ -9,8 +9,10 @@ import com.intellij.openapi.editor.Document;
 import com.intellij.openapi.editor.Editor;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.ui.Messages;
+import forms.TranslatorForm;
 import org.jetbrains.annotations.NotNull;
 import translatorsAPI.GoogleScriptAPI;
+import translatorsAPI.Languages;
 
 import java.io.IOException;
 
@@ -26,19 +28,25 @@ public class SelectedTextAction extends AnAction {
         Project project = event.getRequiredData(CommonDataKeys.PROJECT);
         Document document = editor.getDocument();
         Caret primaryCaret = editor.getCaretModel().getPrimaryCaret();
+        TranslatorForm selectionForm = new TranslatorForm();
+        var languages = selectionForm.showDialogWithTwoInputs();
 
-
-        WriteCommandAction.runWriteCommandAction(project, () -> {
-                    try {
-                        document.replaceString(
-                                primaryCaret.getSelectionStart(), primaryCaret.getSelectionEnd(),
-                                new GoogleScriptAPI().translate("ru", "en", selectedText));
-                    } catch (IOException e) {
-                        Messages.showMessageDialog("Failed to translate", TITLE, Messages.getErrorIcon());
+        if (selectedText != null && languages.isPresent()) {
+            WriteCommandAction.runWriteCommandAction(project, () -> {
+                        try {
+                            document.replaceString(
+                                    primaryCaret.getSelectionStart(), primaryCaret.getSelectionEnd(),
+                                    new GoogleScriptAPI().translate(
+                                            Languages.valueOf(languages.get().getKey()).getTitle(),
+                                            Languages.valueOf(languages.get().getValue()).getTitle(),
+                                            selectedText)
+                            );
+                        } catch (IOException e) {
+                            Messages.showMessageDialog("Failed to translate", TITLE, Messages.getErrorIcon());
+                        }
                     }
-                }
-        );
-
-        primaryCaret.removeSelection();
+            );
+            primaryCaret.removeSelection();
+        }
     }
 }
