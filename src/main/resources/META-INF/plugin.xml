@@ -22,5 +22,8 @@
                 text="Selected Text Translate">
             <keyboard-shortcut keymap="$default" first-keystroke="ctrl BACK_SLASH" second-keystroke="ctrl T"/>
         </action>
+        <action id="actions.InputPopupSelectedText" class="actions.InputPopupSelectedText" text="Input PopUp ">
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl BACK_SLASH" second-keystroke="ctrl R"/>
+        </action>
     </actions>
 </idea-plugin>
