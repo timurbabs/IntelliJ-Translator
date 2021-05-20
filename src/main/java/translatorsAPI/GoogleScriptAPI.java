@@ -7,6 +7,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
+import java.util.stream.Collectors;
 
 public class GoogleScriptAPI implements Translator {
     @Override
@@ -20,15 +21,13 @@ public class GoogleScriptAPI implements Translator {
         final HttpURLConnection con = (HttpURLConnection) url.openConnection();
         con.setRequestProperty("User-Agent", "Mozilla/5.0");
         final BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));
-        String inputLine;
-        while ((inputLine = in.readLine()) != null) {
-            if (inputLine.contains("&#39;")) {
-                inputLine = inputLine.replace("&#39;", "'");
+        String translated = in.lines().map(line -> {
+            if (line.contains("&#39;")) {
+                line = line.replace("&#39;", "'");
             }
-            response.append(inputLine);
-        }
+            return line;
+        }).collect(Collectors.joining());
         in.close();
-
-        return response.toString();
+        return translated;
     }
 }

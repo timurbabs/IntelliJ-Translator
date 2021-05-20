@@ -8,7 +8,6 @@ import com.intellij.openapi.editor.Caret;
 import com.intellij.openapi.editor.Document;
 import com.intellij.openapi.editor.Editor;
 import com.intellij.openapi.project.Project;
-import com.intellij.openapi.ui.Messages;
 import forms.TranslatorForm;
 import org.jetbrains.annotations.NotNull;
 import translatorsAPI.GoogleScriptAPI;
@@ -38,14 +37,12 @@ public class InputReplaceSelectedText extends AnAction {
                                     )
                             );
                         } catch (IOException e) {
-                            Messages.showMessageDialog("Failed to translate.",
-                                    TranslatorForm.TITLE, Messages.getErrorIcon());
+                            TranslatorForm.showTranslateErrorMessage();
                         }
                     }));
             primaryCaret.removeSelection();
         } else {
-            Messages.showMessageDialog("Please select a text for translation.",
-                    TranslatorForm.TITLE, Messages.getWarningIcon());
+            TranslatorForm.showNoSelectedMessage();
         }
     }
 }

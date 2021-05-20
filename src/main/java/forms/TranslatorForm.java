@@ -1,6 +1,7 @@
 package forms;
 
 import com.intellij.openapi.ui.ComboBox;
+import com.intellij.openapi.ui.Messages;
 import translatorsAPI.Languages;
 
 import javax.swing.*;
@@ -33,6 +34,16 @@ public class TranslatorForm {
         } else {
             return Optional.empty();
         }
+    }
+
+    public static void showNoSelectedMessage() {
+        Messages.showMessageDialog("Please select a text for translation.",
+                TITLE, Messages.getWarningIcon());
+    }
+
+    public static void showTranslateErrorMessage() {
+        Messages.showMessageDialog("Failed to translate.",
+                TITLE, Messages.getErrorIcon());
     }
 }
 
