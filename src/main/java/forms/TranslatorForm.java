@@ -10,13 +10,13 @@ import java.util.Optional;
 
 public class TranslatorForm {
 
-    private static final String TITLE = "Translator";
+    public static final String TITLE = "Translator";
 
-    public Optional<AbstractMap.SimpleEntry<String, String>> showDialogWithTwoInputs() {
-        String[] languages = Languages.names();
-        ComboBox<String> from = new ComboBox<>(languages);
-        ComboBox<String> to = new ComboBox<>(languages);
-        JPanel myPanel = new JPanel();
+    public static Optional<AbstractMap.SimpleEntry<String, String>> showDialogWithTwoInputs() {
+        final String[] languages = Languages.names();
+        final ComboBox<String> from = new ComboBox<>(languages);
+        final ComboBox<String> to = new ComboBox<>(languages);
+        final JPanel myPanel = new JPanel();
 
         myPanel.add(new JLabel("from:"));
         myPanel.add(from);
@@ -26,8 +26,9 @@ public class TranslatorForm {
 
         if (JOptionPane.showConfirmDialog(null, myPanel,
                 TITLE, JOptionPane.OK_CANCEL_OPTION) == JOptionPane.OK_OPTION) {
-            String langFrom = Objects.requireNonNull(from.getSelectedItem()).toString();
-            String langTo = Objects.requireNonNull(to.getSelectedItem()).toString();
+            final String langFrom = Objects.requireNonNull(from.getSelectedItem()).toString();
+            final String langTo = Objects.requireNonNull(to.getSelectedItem()).toString();
+
             return Optional.of(new AbstractMap.SimpleEntry<>(langFrom, langTo));
         } else {
             return Optional.empty();
