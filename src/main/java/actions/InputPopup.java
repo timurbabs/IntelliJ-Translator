@@ -10,22 +10,23 @@ import com.intellij.openapi.ui.popup.Balloon;
 import com.intellij.openapi.ui.popup.JBPopupFactory;
 import com.intellij.ui.JBColor;
 import com.intellij.ui.awt.RelativePoint;
-import forms.TranslatorForm;
+import forms.TranslatorForms;
 import org.jetbrains.annotations.NotNull;
 import translatorsAPI.GoogleScriptAPI;
 import translatorsAPI.Languages;
 
 import java.io.IOException;
 
-public class InputPopupSelectedText extends AnAction {
+public class InputPopup extends AnAction {
 
     @Override
     public void actionPerformed(@NotNull AnActionEvent event) {
         final Editor editor = event.getRequiredData(CommonDataKeys.EDITOR);
         final String selectedText = editor.getSelectionModel().getSelectedText();
         final Project project = event.getRequiredData(CommonDataKeys.PROJECT);
+
         if (selectedText != null) {
-            TranslatorForm.showDialogWithTwoInputs().ifPresent(stringStringSimpleEntry ->
+            TranslatorForms.showDialogWithTwoInputs().ifPresent(stringStringSimpleEntry ->
                     WriteCommandAction.runWriteCommandAction(project, () -> {
                         try {
                             final String result = new GoogleScriptAPI().translate(
@@ -41,11 +42,11 @@ public class InputPopupSelectedText extends AnAction {
                                     .createBalloon()
                                     .show(relPoint, Balloon.Position.below);
                         } catch (IOException e) {
-                            TranslatorForm.showTranslateErrorMessage();
+                            TranslatorForms.showTranslateErrorMessage();
                         }
                     }));
         } else {
-            TranslatorForm.showNoSelectedMessage();
+            TranslatorForms.showNoSelectedMessage();
         }
     }
 }

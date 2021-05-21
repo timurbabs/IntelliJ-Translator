@@ -9,7 +9,7 @@ import java.util.AbstractMap;
 import java.util.Objects;
 import java.util.Optional;
 
-public class TranslatorForm {
+public class TranslatorForms {
 
     public static final String TITLE = "Translator";
 

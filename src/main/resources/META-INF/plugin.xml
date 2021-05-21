@@ -1,11 +1,11 @@
 <idea-plugin>
     <id>com.devtools.java.IntelliJ-Translator</id>
-    <name>Plugin display name here</name>
-    <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">YourCompany</vendor>
+    <name>.</name>
+    <vendor email="." url=".">.</vendor>
 
     <description><![CDATA[
-    Enter short description for your plugin here.<br>
-    <em>most HTML tags may be used</em>
+    dsa.<br>
+    <em>...............................................................................................................a</em>
     ]]></description>
 
     <!-- please see https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html
@@ -18,11 +18,11 @@
 
     <actions>
         <!-- Add your actions here -->
-        <action id="actions.InputReplaceSelectedText" class="actions.InputReplaceSelectedText"
+        <action id="actions.InputReplacing" class="actions.InputReplacing"
                 text="Selected Text Translate">
             <keyboard-shortcut keymap="$default" first-keystroke="ctrl BACK_SLASH" second-keystroke="ctrl T"/>
         </action>
-        <action id="actions.InputPopupSelectedText" class="actions.InputPopupSelectedText" text="Input PopUp ">
+        <action id="actions.InputPopup" class="actions.InputPopup" text="Input PopUp ">
             <keyboard-shortcut keymap="$default" first-keystroke="ctrl BACK_SLASH" second-keystroke="ctrl R"/>
         </action>
     </actions>
