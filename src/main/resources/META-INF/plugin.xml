@@ -11,9 +11,13 @@
     <!-- please see https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html
          on how to target different products -->
     <depends>com.intellij.modules.platform</depends>
-
     <extensions defaultExtensionNs="com.intellij">
-        <!-- Add your extensions here -->
+        <applicationService serviceImplementation="properties.AppSettingsState"/>
+    </extensions>
+    <extensions defaultExtensionNs="com.intellij">
+        <applicationConfigurable parentId="tools" instance="properties.AppSettingsConfigurable"
+                                 id="properties.AppSettingsConfigurable"
+                                 displayName="Translator Settings"/>
     </extensions>
 
     <actions>
@@ -25,10 +29,7 @@
         <action id="actions.InputPopup" class="actions.InputPopup" text="Input PopUp ">
             <keyboard-shortcut keymap="$default" first-keystroke="ctrl BACK_SLASH" second-keystroke="ctrl R"/>
         </action>
-        <action id="actions.LanguageSelection" class="actions.LanguageSelection" text="Default Languages Selection">
-            <keyboard-shortcut keymap="$default" first-keystroke="ctrl BACK_SLASH" second-keystroke="ctrl E"/>
-        </action>
-        <action id="actions.Popup" class="actions.Popup" text="PopUp translation">
+        <action id="actions.Popup" class="actions.Popup" text="PopUp">
             <keyboard-shortcut keymap="$default" first-keystroke="ctrl BACK_SLASH" second-keystroke="ctrl Q"/>
         </action>
     </actions>
