@@ -8,8 +8,7 @@ public enum Languages {
     Russian ("ru"),
     French ("fr"),
     Korean ("ko"),
-    Chinese_simplified ("zh"),
-    Chinese_traditional ("zh-TW"),
+    Chinese ("zh"),
     Czech ("cs"),
     Italian ("it"),
     Japanese ("ja");
@@ -27,6 +26,6 @@ public enum Languages {
     public static String[] names() {
         return Arrays.toString(Languages.values())
                 .replaceAll("^.|.$", "")
-                .replaceAll("_", " ").split(", ");
+                .split(", ");
     }
 }

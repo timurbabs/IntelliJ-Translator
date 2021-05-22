@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
 public class GoogleScriptAPI implements Translator {
     @Override
     public String translate(String langFrom, String langTo, String text) throws IOException {
-        final String urlStr = "https://script.google.com/macros/s/AKfycbxXX-3QFa4OSwKGtcIUTTWUor9vwpt8B7ar0si0Ci9gv8ZN_M3vdHA4KepxeClEFvuPmw/exec" +
+        final String urlStr = "https://script.google.com/macros/s/AKfycbzhUtn_ABhhTiumNjTPUajsnherhr988Z7qpw3PxiInNasPhZ_wOw1jOQHOL7oL6rIn9w/exec" +
                 "?q=" + URLEncoder.encode(text, StandardCharsets.UTF_8) +
                 "&target=" + langTo +
                 "&source=" + langFrom;
