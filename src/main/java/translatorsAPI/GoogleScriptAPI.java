@@ -20,7 +20,7 @@ public class GoogleScriptAPI implements Translator {
         final URL url = new URL(urlStr);
         final HttpURLConnection con = (HttpURLConnection) url.openConnection();
         con.setRequestProperty("User-Agent", "Mozilla/8.0");
-        final BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));
+        final BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream(), StandardCharsets.UTF_8));
         String translated = (in.lines().collect(Collectors.joining("\n")));
         in.close();
         return translated;
