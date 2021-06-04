@@ -4,7 +4,7 @@ import com.intellij.openapi.ui.ComboBox;
 import com.intellij.ui.components.JBLabel;
 import com.intellij.util.ui.FormBuilder;
 import org.jetbrains.annotations.NotNull;
-import translatorsAPI.Languages;
+import translators.Languages;
 
 import javax.swing.*;
 
@@ -16,9 +16,9 @@ public class AppSettingsComponent {
 
     public AppSettingsComponent() {
         myMainPanel = FormBuilder.createFormBuilder()
-                .addLabeledComponent(new JBLabel("Enter language from: "),
+                .addLabeledComponent(new JBLabel("Language from: "),
                         languageFrom, 1, false)
-                .addLabeledComponent(new JBLabel("Enter language to: "),
+                .addLabeledComponent(new JBLabel("Language to: "),
                         languageTo, 1, false)
                 .addComponentFillVertically(new JPanel(), 0)
                 .getPanel();
