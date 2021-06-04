@@ -8,6 +8,7 @@ import com.intellij.openapi.editor.Caret;
 import com.intellij.openapi.editor.Document;
 import com.intellij.openapi.editor.Editor;
 import com.intellij.openapi.project.Project;
+import forms.Titles;
 import forms.TranslatorForms;
 import org.jetbrains.annotations.NotNull;
 import translators.GoogleScriptAPI;
@@ -26,7 +27,7 @@ public class InputReplacing extends AnAction {
         final Caret primaryCaret = editor.getCaretModel().getPrimaryCaret();
 
         if (selectedText != null) {
-            TranslatorForms.showDialogWithTwoInputs().ifPresent(stringStringSimpleEntry ->
+            TranslatorForms.showDialogWithTwoInputs(Titles.SELECT).ifPresent(stringStringSimpleEntry ->
                     WriteCommandAction.runWriteCommandAction(project, () -> {
                         try {
                             document.replaceString(
