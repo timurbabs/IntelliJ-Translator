@@ -2,7 +2,7 @@ package forms;
 
 import com.intellij.openapi.ui.ComboBox;
 import com.intellij.openapi.ui.Messages;
-import translatorsAPI.Languages;
+import translators.Languages;
 
 import javax.swing.*;
 import java.util.AbstractMap;

@@ -13,8 +13,8 @@ import com.intellij.ui.awt.RelativePoint;
 import forms.Titles;
 import forms.TranslatorForms;
 import org.jetbrains.annotations.NotNull;
-import translatorsAPI.GoogleScriptAPI;
-import translatorsAPI.Languages;
+import translators.GoogleScriptAPI;
+import translators.Languages;
 
 import java.io.IOException;
 
