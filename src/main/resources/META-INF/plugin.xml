@@ -32,5 +32,8 @@
         <action id="actions.Popup" class="actions.Popup" text="PopUp">
             <keyboard-shortcut keymap="$default" first-keystroke="ctrl BACK_SLASH" second-keystroke="ctrl Q"/>
         </action>
+        <action id="actions.DefaultLanguages" class="actions.DefaultLanguages" text="Set Default Languages">
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl BACK_SLASH" second-keystroke="ctrl S"/>
+        </action>
     </actions>
 </idea-plugin>

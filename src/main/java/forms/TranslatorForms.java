@@ -13,7 +13,7 @@ public class TranslatorForms {
 
     public static final String TITLE = "Translator";
 
-    public static Optional<AbstractMap.SimpleEntry<String, String>> showDialogWithTwoInputs() {
+    public static Optional<AbstractMap.SimpleEntry<String, String>> showDialogWithTwoInputs(Titles title) {
         final String[] languages = Languages.names();
         final ComboBox<String> from = new ComboBox<>(languages);
         final ComboBox<String> to = new ComboBox<>(languages);
@@ -26,10 +26,9 @@ public class TranslatorForms {
         myPanel.add(to);
 
         if (JOptionPane.showConfirmDialog(null, myPanel,
-                TITLE, JOptionPane.OK_CANCEL_OPTION) == JOptionPane.OK_OPTION) {
+                title.getTitle(), JOptionPane.OK_CANCEL_OPTION) == JOptionPane.OK_OPTION) {
             final String langFrom = Objects.requireNonNull(from.getSelectedItem()).toString();
             final String langTo = Objects.requireNonNull(to.getSelectedItem()).toString();
-
             return Optional.of(new AbstractMap.SimpleEntry<>(langFrom, langTo));
         } else {
             return Optional.empty();
@@ -46,4 +45,5 @@ public class TranslatorForms {
                 TITLE, Messages.getErrorIcon());
     }
 }
+
 

@@ -10,6 +10,7 @@ import com.intellij.openapi.ui.popup.Balloon;
 import com.intellij.openapi.ui.popup.JBPopupFactory;
 import com.intellij.ui.JBColor;
 import com.intellij.ui.awt.RelativePoint;
+import forms.Titles;
 import forms.TranslatorForms;
 import org.jetbrains.annotations.NotNull;
 import translatorsAPI.GoogleScriptAPI;
@@ -19,6 +20,8 @@ import java.io.IOException;
 
 public class InputPopup extends AnAction {
 
+    private static final String TITLE = "";
+
     @Override
     public void actionPerformed(@NotNull AnActionEvent event) {
         final Editor editor = event.getRequiredData(CommonDataKeys.EDITOR);
@@ -26,7 +29,7 @@ public class InputPopup extends AnAction {
         final Project project = event.getRequiredData(CommonDataKeys.PROJECT);
 
         if (selectedText != null) {
-            TranslatorForms.showDialogWithTwoInputs().ifPresent(stringStringSimpleEntry ->
+            TranslatorForms.showDialogWithTwoInputs(Titles.SELECT).ifPresent(stringStringSimpleEntry ->
                     WriteCommandAction.runWriteCommandAction(project, () -> {
                         try {
                             final String result = new GoogleScriptAPI().translate(
