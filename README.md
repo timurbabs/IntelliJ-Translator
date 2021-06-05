@@ -7,7 +7,6 @@
 </p>
 
 ## Features
-- Support for **34 languages**;
 - The ability to both **replace** and simply **display** the translation of the text, taking into account **all special characters**.;
 - The quality of the translation is comparable to that of **google translator**, because we use its **API** :)
 
