@@ -39,7 +39,7 @@ To translate text with replacement, press **Ctrl+\ , Ctrl+T** and select languag
 
 <img alt="Qries" src="https://sun9-9.userapi.com/impg/1xe7iskxjbplfrwG4Hc7ZxRItj1KC3IAU6KYNA/CJEE9SD6Lkk.jpg?size=407x135&quality=96&sign=4c529acda3237d3e4da4fee09c205330&type=album">
 
-<img alt="Qries" src="https://sun9-18.userapi.com/impg/MLH2LRSJLe4V7quzhMngcJ9kLj9yZJDXYBONug/9l0B5DxJugA.jpg?size=164x65&quality=96&sign=90253001ab4488b9e222a95f7c388dbd&type=album" width=20%>
+<img alt="Qries" src="https://sun9-18.userapi.com/impg/MLH2LRSJLe4V7quzhMngcJ9kLj9yZJDXYBONug/9l0B5DxJugA.jpg?size=164x65&quality=96&sign=90253001ab4488b9e222a95f7c388dbd&type=album" width=21%>
 
 <img alt="Qries" src="https://sun9-20.userapi.com/impg/OiQQ0Su4k95HmfAs9xIWAl-uTBt2IY_sT3c5Cg/aun01jM3hl8.jpg?size=173x72&quality=96&sign=01555b24b4d03c4ef60dfcefca2554c1&type=album">
 
