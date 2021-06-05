@@ -37,7 +37,7 @@ public enum Languages {
     Thai ("th"),
     Turkish ("tr"),
     Vietnamese ("vi");
-    
+
     private final String title;
 
     Languages(String title) {
