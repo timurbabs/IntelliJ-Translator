@@ -19,9 +19,9 @@
                                  id="properties.AppSettingsConfigurable"
                                  displayName="Translator Settings"/>
     </extensions>
-
     <actions>
-        <!-- Add your actions here -->
+        <group id="SimpleGroup" text="Translator" popup="true"  icon="DemoPluginIcons.DemoAction" >
+            <add-to-group group-id="EditorPopupMenu" anchor="first"/>
         <action id="actions.InputReplacing" class="actions.InputReplacing"
                 text="Selected Text Translate">
             <keyboard-shortcut keymap="$default" first-keystroke="ctrl BACK_SLASH" second-keystroke="ctrl T"/>
@@ -38,5 +38,6 @@
         <action id="actions.Replacing" class="actions.Replacing" text="Replacing">
             <keyboard-shortcut keymap="$default" first-keystroke="ctrl BACK_SLASH" second-keystroke="ctrl P"/>
         </action>
+        </group>
     </actions>
 </idea-plugin>
