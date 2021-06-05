@@ -16,6 +16,7 @@ public class AppSettingsComponent {
 
     public AppSettingsComponent() {
         myMainPanel = FormBuilder.createFormBuilder()
+                .addComponent(new JBLabel("Default language settings:"))
                 .addLabeledComponent(new JBLabel("Language from: "),
                         languageFrom, 1, false)
                 .addLabeledComponent(new JBLabel("Language to: "),
