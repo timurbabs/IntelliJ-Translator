@@ -70,11 +70,11 @@ public class APITests {
     }
     @Test
     void fromItalianoTranslateTests() throws IOException {
-        assertEquals(new String("Mein Name ist Alex".getBytes(), StandardCharsets.UTF_8), new GoogleScriptAPI().translate("it", "de", "Mi chiamo Alex"));
-        assertEquals(new String("Mon nom est Alex".getBytes(), StandardCharsets.UTF_8), new GoogleScriptAPI().translate("it", "fr", "Mi chiamo Alex"));
-        assertEquals(new String("My name is Alex".getBytes(), StandardCharsets.UTF_8), new GoogleScriptAPI().translate("it", "en", "Mi chiamo Alex"));
-        assertEquals(new String("Меня зовут Алекс".getBytes(), StandardCharsets.UTF_8), new GoogleScriptAPI().translate("it", "ru", "Mi chiamo Alex"));
-        assertEquals(new String("Moje jméno je Alex".getBytes(), StandardCharsets.UTF_8), new GoogleScriptAPI().translate("it", "cs", "Mi chiamo Alex"));
+        assertEquals(new String("Ich heiße Alex".getBytes(), StandardCharsets.UTF_8), new GoogleScriptAPI().translate("it", "de", "Mi chiamo Alex"));
+        assertEquals(new String("Je m'appelle Alex".getBytes(), StandardCharsets.UTF_8), new GoogleScriptAPI().translate("it", "fr", "Mi chiamo Alex"));
+        assertEquals(new String("My name's Alex".getBytes(), StandardCharsets.UTF_8), new GoogleScriptAPI().translate("it", "en", "Mi chiamo Alex"));
+        assertEquals(new String("Меня зовут алекс".getBytes(), StandardCharsets.UTF_8), new GoogleScriptAPI().translate("it", "ru", "Mi chiamo Alex"));
+        assertEquals(new String("Jmenuji se Alex".getBytes(), StandardCharsets.UTF_8), new GoogleScriptAPI().translate("it", "cs", "Mi chiamo Alex"));
         assertEquals(new String("我叫亚历克斯".getBytes(), StandardCharsets.UTF_8), new GoogleScriptAPI().translate("it", "zh", "Mi chiamo Alex"));
         assertEquals(new String("私の名前はアレックスです".getBytes(), StandardCharsets.UTF_8), new GoogleScriptAPI().translate("it", "ja", "Mi chiamo Alex"));
 
