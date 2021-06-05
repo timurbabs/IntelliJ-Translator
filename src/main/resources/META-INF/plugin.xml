@@ -1,6 +1,6 @@
 <idea-plugin>
     <id>com.devtools.java.IntelliJ-Translator</id>
-    <name>IntelliJ-Translator</name>
+    <name>Translator</name>
     <vendor url="https://github.com/timurbabs/IntelliJ-Translator" email="283797@niuitmo.ru">ITMO University</vendor>
 
     <description>Student project. Plugin for intellij idea to translate text in code.</description>

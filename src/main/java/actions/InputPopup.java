@@ -56,10 +56,5 @@ public class InputPopup extends AnAction {
             TranslatorForms.showNoSelectedMessage();
         }
     }
-
-    @Override
-    public boolean isDumbAware() {
-        return false;
-    }
 }
 

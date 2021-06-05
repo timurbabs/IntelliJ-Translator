@@ -16,6 +16,8 @@ import translators.Languages;
 
 import java.io.IOException;
 
+//Replacing
+
 public class Replacing extends AnAction {
 
     @Override
@@ -45,10 +47,5 @@ public class Replacing extends AnAction {
         } else {
             TranslatorForms.showNoSelectedMessage();
         }
-    }
-
-    @Override
-    public boolean isDumbAware() {
-        return false;
     }
 }

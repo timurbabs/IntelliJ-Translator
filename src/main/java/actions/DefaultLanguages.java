@@ -27,9 +27,4 @@ public class DefaultLanguages extends AnAction {
                 })
         );
     }
-
-    @Override
-    public boolean isDumbAware() {
-        return false;
-    }
 }
