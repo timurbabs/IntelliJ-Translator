@@ -66,8 +66,7 @@ If you do not want to choose a language or do not know the word in which languag
 
 ------------
 
-
-### You can change hotkeys in File -> Settings -> Keymap -> Plugins -> TranslatorYou can change hotkeys in File -> Settings -> Keymap -> Plugins -> Translator.
+### You can change hotkeys in File -> Settings -> Keymap -> Plugins -> Translator
 
 ------------
 
