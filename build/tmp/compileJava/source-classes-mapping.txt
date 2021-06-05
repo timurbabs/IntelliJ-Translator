@@ -1,0 +1,28 @@
+translators/Translator.java
+ translators.Translator
+actions/DefaultLanguages.java
+ actions.DefaultLanguages
+actions/Replacing.java
+ actions.Replacing
+properties/AppSettingsState.java
+ properties.AppSettingsState
+actions/InputReplacing.java
+ actions.InputReplacing
+properties/AppSettingsConfigurable.java
+ properties.AppSettingsConfigurable
+actions/Popup.java
+ actions.Popup
+properties/AppSettingsComponent.java
+ properties.AppSettingsComponent
+actions/InputPopup.java
+ actions.InputPopup
+forms/Titles.java
+ forms.Titles
+translators/Languages.java
+ translators.Languages
+translators/GoogleScriptAPI.java
+ translators.GoogleScriptAPI
+forms/TranslatorForms.java
+ forms.TranslatorForms
+icons/DemoPluginIcons.java
+ icons.DemoPluginIcons
