@@ -2,8 +2,8 @@
 ### Simple IntelliJ IDEA plugin for translate
 <p float="left">
 <img alt="Qries" src="https://img.shields.io/github/workflow/status/timurbabs/IntelliJ-Translator/Java%20CI%20with%20Gradle?style=flat-square">
-<img alt="Qries" src="https://img.shields.io/github/v/release/timurbabs/IntelliJ-Translator?style=plastic">
-<img alt="Qries" src="https://img.shields.io/github/repo-size/timurbabs/IntelliJ-Translator">
+<img alt="Qries" src="https://img.shields.io/github/v/release/timurbabs/IntelliJ-Translator?style=flat-square">
+<img alt="Qries" src="https://img.shields.io/github/repo-size/timurbabs/IntelliJ-Translator?style=flat-square">
 </p>
 
 ## Features
