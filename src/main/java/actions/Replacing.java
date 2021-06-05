@@ -46,4 +46,9 @@ public class Replacing extends AnAction {
             TranslatorForms.showNoSelectedMessage();
         }
     }
+
+    @Override
+    public boolean isDumbAware() {
+        return false;
+    }
 }

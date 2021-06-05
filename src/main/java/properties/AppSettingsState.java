@@ -32,5 +32,4 @@ public class AppSettingsState implements PersistentStateComponent<AppSettingsSta
     public void loadState(@NotNull AppSettingsState state) {
         XmlSerializerUtil.copyBean(state, this);
     }
-
 }

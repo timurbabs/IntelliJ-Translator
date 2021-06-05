@@ -1,15 +1,13 @@
 <idea-plugin>
     <id>com.devtools.java.IntelliJ-Translator</id>
-    <name>.</name>
-    <vendor email="." url=".">.</vendor>
+    <name>IntelliJ-Translator</name>
+    <vendor url="https://github.com/timurbabs/IntelliJ-Translator" email="283797@niuitmo.ru">ITMO University</vendor>
 
-    <description><![CDATA[
-    dsa.<br>
-    <em>...............................................................................................................a</em>
-    ]]></description>
+    <description>Student project. Plugin for intellij idea to translate text in code.</description>
 
-    <!-- please see https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html
-         on how to target different products -->
+    <version>1.0.0</version>
+    <change-notes>Initial release of the plugin. vsem dobra kto chitaet :)</change-notes>
+
     <depends>com.intellij.modules.platform</depends>
     <extensions defaultExtensionNs="com.intellij">
         <applicationService serviceImplementation="properties.AppSettingsState"/>
@@ -17,27 +15,35 @@
     <extensions defaultExtensionNs="com.intellij">
         <applicationConfigurable parentId="tools" instance="properties.AppSettingsConfigurable"
                                  id="properties.AppSettingsConfigurable"
-                                 displayName="Translator Settings"/>
+                                 displayName="Translator"/>
     </extensions>
     <actions>
-        <group id="SimpleGroup" text="Translator" popup="true"  icon="DemoPluginIcons.DemoAction" >
+        <group id="SimpleGroup" text="Translator" popup="true" icon="DemoPluginIcons.DemoAction">
             <add-to-group group-id="EditorPopupMenu" anchor="first"/>
-        <action id="actions.InputReplacing" class="actions.InputReplacing"
-                text="Selected Text Translate">
-            <keyboard-shortcut keymap="$default" first-keystroke="ctrl BACK_SLASH" second-keystroke="ctrl T"/>
-        </action>
-        <action id="actions.InputPopup" class="actions.InputPopup" text="Input PopUp ">
-            <keyboard-shortcut keymap="$default" first-keystroke="ctrl BACK_SLASH" second-keystroke="ctrl R"/>
-        </action>
-        <action id="actions.Popup" class="actions.Popup" text="PopUp">
-            <keyboard-shortcut keymap="$default" first-keystroke="ctrl BACK_SLASH" second-keystroke="ctrl Q"/>
-        </action>
-        <action id="actions.DefaultLanguages" class="actions.DefaultLanguages" text="Set Default Languages">
-            <keyboard-shortcut keymap="$default" first-keystroke="ctrl BACK_SLASH" second-keystroke="ctrl S"/>
-        </action>
-        <action id="actions.Replacing" class="actions.Replacing" text="Replacing">
-            <keyboard-shortcut keymap="$default" first-keystroke="ctrl BACK_SLASH" second-keystroke="ctrl P"/>
-        </action>
+            <action id="actions.InputReplacing" class="actions.InputReplacing"
+                    text="Translate">
+                <keyboard-shortcut keymap="$default" first-keystroke="ctrl BACK_SLASH" second-keystroke="ctrl T"/>
+            </action>
+            <action id="actions.InputPopup" class="actions.InputPopup" text="Pop-up Translate">
+                <keyboard-shortcut keymap="$default" first-keystroke="ctrl BACK_SLASH" second-keystroke="ctrl R"/>
+            </action>
+            <action id="actions.Popup" class="actions.Popup" text="Pop-up Translate with Default">
+                <keyboard-shortcut keymap="$default" first-keystroke="ctrl BACK_SLASH" second-keystroke="ctrl Q"/>
+            </action>
+            <action id="actions.DefaultLanguages" class="actions.DefaultLanguages" text="Set Default Languages">
+                <keyboard-shortcut keymap="$default" first-keystroke="ctrl BACK_SLASH" second-keystroke="ctrl S"/>
+            </action>
+            <action id="actions.Replacing" class="actions.Replacing" text="Translate with Default">
+                <keyboard-shortcut keymap="$default" first-keystroke="ctrl BACK_SLASH" second-keystroke="ctrl P"/>
+            </action>
+            <action id="actions.AutoPopup" class="actions.AutoPopup" text="Auto Pop-up Translate">
+                <keyboard-shortcut keymap="$default" first-keystroke="ctrl BACK_SLASH"
+                                   second-keystroke="ctrl CLOSE_BRACKET"/>
+            </action>
+            <action id="actions.AutoReplacing" class="actions.AutoReplacing" text="Auto Translate">
+                <keyboard-shortcut keymap="$default" first-keystroke="ctrl BACK_SLASH"
+                                   second-keystroke="ctrl OPEN_BRACKET"/>
+            </action>
         </group>
     </actions>
 </idea-plugin>

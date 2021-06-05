@@ -7,13 +7,15 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 public class GoogleScriptAPI implements Translator {
 
     @Override
     public String translate(String langFrom, String langTo, String text) throws IOException {
-        final String urlStr = "https://script.google.com/macros/s/AKfycbzhUtn_ABhhTiumNjTPUajsnherhr988Z7qpw3PxiInNasPhZ_wOw1jOQHOL7oL6rIn9w/exec" +
+        final Map<String, String> env = System.getenv();
+        final String urlStr = env.get("URL") +
                 "?q=" + URLEncoder.encode(text, StandardCharsets.UTF_8) +
                 "&target=" + langTo +
                 "&source=" + langFrom;
