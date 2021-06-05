@@ -19,11 +19,7 @@ import translators.Translator;
 
 import java.io.IOException;
 
-/**
- * Action to show the translation in a pop-up with default languages.
- */
-
-public class Popup extends AnAction {
+public class AutoPopup extends AnAction {
 
     @Override
     public void actionPerformed(@NotNull AnActionEvent event) {
@@ -36,7 +32,7 @@ public class Popup extends AnAction {
                 try {
                     Translator translator = new GoogleScriptAPI();
                     final String result = translator.translate(
-                            Languages.valueOf(AppSettingsState.getInstance().languageFrom).getTitle(),
+                            "",
                             Languages.valueOf(AppSettingsState.getInstance().languageTo).getTitle(),
                             selectedText
                     );

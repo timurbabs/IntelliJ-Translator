@@ -11,9 +11,11 @@ import java.util.Optional;
 
 public class TranslatorForms {
 
-    public static final String TITLE = "Translator";
+    public static final String DEFAULT_TITLE = "Translator";
+    public static final String LANGUAGES_SELECTION = "Select default languages";
+    public static final String SETTING_DEFAULT_LANGUAGES = "Select languages";
 
-    public static Optional<AbstractMap.SimpleEntry<String, String>> showDialogWithTwoInputs(Titles title) {
+    public static Optional<AbstractMap.SimpleEntry<String, String>> showDialogWithTwoInputs(String title) {
         final String[] languages = Languages.names();
         final ComboBox<String> from = new ComboBox<>(languages);
         final ComboBox<String> to = new ComboBox<>(languages);
@@ -26,7 +28,7 @@ public class TranslatorForms {
         myPanel.add(to);
 
         if (JOptionPane.showConfirmDialog(null, myPanel,
-                title.getTitle(), JOptionPane.OK_CANCEL_OPTION) == JOptionPane.OK_OPTION) {
+                title, JOptionPane.OK_CANCEL_OPTION) == JOptionPane.OK_OPTION) {
             final String langFrom = Objects.requireNonNull(from.getSelectedItem()).toString();
             final String langTo = Objects.requireNonNull(to.getSelectedItem()).toString();
             return Optional.of(new AbstractMap.SimpleEntry<>(langFrom, langTo));
@@ -37,12 +39,12 @@ public class TranslatorForms {
 
     public static void showNoSelectedMessage() {
         Messages.showMessageDialog("Please select a text for translation.",
-                TITLE, Messages.getWarningIcon());
+                DEFAULT_TITLE, Messages.getWarningIcon());
     }
 
     public static void showTranslateErrorMessage() {
         Messages.showMessageDialog("Failed to translate.",
-                TITLE, Messages.getErrorIcon());
+                DEFAULT_TITLE, Messages.getErrorIcon());
     }
 }
 

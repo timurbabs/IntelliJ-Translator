@@ -49,5 +49,4 @@ public class AppSettingsConfigurable implements Configurable {
     public void disposeUIResources() {
         mySettingsComponent = null;
     }
-
 }

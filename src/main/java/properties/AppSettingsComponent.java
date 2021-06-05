@@ -53,6 +53,5 @@ public class AppSettingsComponent {
     public void setLanguageToText(@NotNull String newText) {
         languageTo.setItem(newText);
     }
-
 }
 

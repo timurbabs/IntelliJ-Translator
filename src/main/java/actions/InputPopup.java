@@ -10,17 +10,19 @@ import com.intellij.openapi.ui.popup.Balloon;
 import com.intellij.openapi.ui.popup.JBPopupFactory;
 import com.intellij.ui.JBColor;
 import com.intellij.ui.awt.RelativePoint;
-import forms.Titles;
 import forms.TranslatorForms;
 import org.jetbrains.annotations.NotNull;
 import translators.GoogleScriptAPI;
 import translators.Languages;
+import translators.Translator;
 
 import java.io.IOException;
 
-public class InputPopup extends AnAction {
+/**
+ * Action to show the translation in a pop-up with a choice of languages for translation.
+ */
 
-    private static final String TITLE = "";
+public class InputPopup extends AnAction {
 
     @Override
     public void actionPerformed(@NotNull AnActionEvent event) {
@@ -29,10 +31,11 @@ public class InputPopup extends AnAction {
         final Project project = event.getRequiredData(CommonDataKeys.PROJECT);
 
         if (selectedText != null) {
-            TranslatorForms.showDialogWithTwoInputs(Titles.SELECT).ifPresent(stringStringSimpleEntry ->
+            TranslatorForms.showDialogWithTwoInputs(TranslatorForms.LANGUAGES_SELECTION).ifPresent(stringStringSimpleEntry ->
                     WriteCommandAction.runWriteCommandAction(project, () -> {
                         try {
-                            final String result = new GoogleScriptAPI().translate(
+                            Translator translator = new GoogleScriptAPI();
+                            final String result = translator.translate(
                                     Languages.valueOf(stringStringSimpleEntry.getKey()).getTitle(),
                                     Languages.valueOf(stringStringSimpleEntry.getValue()).getTitle(),
                                     selectedText
@@ -47,10 +50,16 @@ public class InputPopup extends AnAction {
                         } catch (IOException e) {
                             TranslatorForms.showTranslateErrorMessage();
                         }
-                    }));
+                    })
+            );
         } else {
             TranslatorForms.showNoSelectedMessage();
         }
+    }
+
+    @Override
+    public boolean isDumbAware() {
+        return false;
     }
 }
 
