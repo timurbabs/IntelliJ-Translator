@@ -75,7 +75,7 @@ public class APITests {
         assertEquals(new String("My name's Alex".getBytes(), StandardCharsets.UTF_8), new GoogleScriptAPI().translate("it", "en", "Mi chiamo Alex"));
         assertEquals(new String("Меня зовут алекс".getBytes(), StandardCharsets.UTF_8), new GoogleScriptAPI().translate("it", "ru", "Mi chiamo Alex"));
         assertEquals(new String("Jmenuji se Alex".getBytes(), StandardCharsets.UTF_8), new GoogleScriptAPI().translate("it", "cs", "Mi chiamo Alex"));
-        assertEquals(new String("我叫亚历克斯".getBytes(), StandardCharsets.UTF_8), new GoogleScriptAPI().translate("it", "zh", "Mi chiamo Alex"));
+        assertEquals(new String("我亚历克斯".getBytes(), StandardCharsets.UTF_8), new GoogleScriptAPI().translate("it", "zh", "Mi chiamo Alex"));
         assertEquals(new String("私の名前はアレックスです".getBytes(), StandardCharsets.UTF_8), new GoogleScriptAPI().translate("it", "ja", "Mi chiamo Alex"));
 
     }
