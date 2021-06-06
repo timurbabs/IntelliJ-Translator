@@ -14,7 +14,7 @@
 ## Installation
 <a name="instruction"></a>
 ### Installation from disk﻿
-**1.** Download the **ZIP** file with the latest version of **IntelliJ Plugin** from [releases](https://github.com/timurbabs/IntelliJ-Translator/rele.. "releases").    
+**1.** Download the **ZIP** file with the latest version of **IntelliJ Plugin** from [releases](https://github.com/timurbabs/IntelliJ-Translator/releases).    
 **2.** Press **Ctrl+Alt+S** to open IDE settings and select **Plugins**.    
 **3.** On the **Plugins** page, click :fa-cog: and then click **Install Plugin from Disk**.    
 **4.** Select the plugin archive file and click **OK**.
