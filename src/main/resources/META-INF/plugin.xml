@@ -5,7 +5,7 @@
 
     <description>Student project. Plugin for intellij idea to translate text in code.</description>
 
-    <version>1.0.0</version>
+    <version>0.1.1</version>
     <change-notes>Initial release of the plugin. vsem dobra kto chitaet :)</change-notes>
 
     <depends>com.intellij.modules.platform</depends>
