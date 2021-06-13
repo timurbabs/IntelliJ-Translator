@@ -43,12 +43,11 @@ jobs:
 
       - name: Run Linters and Test
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           URL: ${{ secrets.URL }}
         run: ./gradlew check
 
       - name: Verify Plugin
-      	env:
+        env:
           URL: ${{ secrets.URL }}
         run: ./gradlew verifyPlugin
 
@@ -151,8 +150,6 @@ jobs:
           key: ${{ runner.os }}-plugin-verifier-${{ steps.properties.outputs.ideVersions }}
 
       - name: Verify Plugin
-      	env:
-          URL: ${{ secrets.URL }}
         run: ./gradlew runPluginVerifier -Pplugin.verifier.home.dir=${{ steps.properties.outputs.pluginVerifierHomeDir }}
 
   releaseDraft:
