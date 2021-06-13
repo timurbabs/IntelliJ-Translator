@@ -192,7 +192,6 @@ jobs:
         uses: actions/upload-release-asset@v1.0.2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      	env:
         with:
           upload_url: ${{ steps.createDraft.outputs.upload_url }}
           asset_path: ./${{ needs.build.outputs.artifact }}
