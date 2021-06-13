@@ -5,12 +5,10 @@ on:
   pull_request: [develop]
 
 jobs:
-
   gradleValidation:
     name: Gradle Wrapper
     runs-on: ubuntu-latest
     steps:
-
       - name: Fetch Sources
         uses: actions/checkout@v2.3.4
 
@@ -22,7 +20,6 @@ jobs:
     needs: gradleValidation
     runs-on: ubuntu-latest
     steps:
-
       - name: Setup Java
         uses: actions/setup-java@v2
         with:
@@ -64,7 +61,6 @@ jobs:
       changelog: ${{ steps.properties.outputs.changelog }}
       artifact: ${{ steps.properties.outputs.artifact }}
     steps:
-
       - name: Setup Java
         uses: actions/setup-java@v2
         with:
@@ -118,7 +114,6 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-
       - name: Setup Java
         uses: actions/setup-java@v2
         with:
@@ -165,7 +160,6 @@ jobs:
     needs: [build, verify]
     runs-on: ubuntu-latest
     steps:
-
       - name: Fetch Sources
         uses: actions/checkout@v2.3.4
 
