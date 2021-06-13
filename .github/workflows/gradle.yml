@@ -98,8 +98,9 @@ jobs:
           echo "::set-output name=name::$NAME"
           echo "::set-output name=changelog::$CHANGELOG"
           echo "::set-output name=artifact::$ARTIFACT"
+
       - name: Build Plugin
-      	env:
+        env:
           URL: ${{ secrets.URL }}
         run: ./gradlew buildPlugin
 
