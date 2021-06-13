@@ -94,6 +94,7 @@ jobs:
           CHANGELOG="${CHANGELOG//$'\n'/'%0A'}"
           CHANGELOG="${CHANGELOG//$'\r'/'%0D'}"
           ARTIFACT="${NAME}-${VERSION}.zip"
+
           echo "::set-output name=version::$VERSION"
           echo "::set-output name=name::$NAME"
           echo "::set-output name=changelog::$CHANGELOG"
