@@ -87,7 +87,7 @@ jobs:
         run: |
           PROPERTIES="$(./gradlew properties --console=plain -q)"
           VERSION="$(echo "$PROPERTIES" | grep "^version:" | cut -f2- -d ' ')"
-          NAME="$(echo "$PROPERTIES" | grep "^pluginName:" | cut -f2- -d ' ')"
+          NAME="$(echo "$PROPERTIES" | grep "^archivesBaseName:" | cut -f2- -d ' ')"
           ARTIFACT="${NAME}-${VERSION}.zip"
 
           echo "::set-output name=version::$VERSION"
